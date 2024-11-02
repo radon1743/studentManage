@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Emit;
+using System.Windows.Forms;
 
 namespace studentManage
 {
@@ -95,14 +96,19 @@ namespace studentManage
             return exeCount("SELECT COUNT(*) FROM STUDENT_TABLE WHERE GENDER = 'Female'");
         }
 
-
+        
         public DataTable searchStudent(string searchdata)
         {
             SqlConnection conn = new SqlConnection(conString);
             conn.Open();
 
 
-            string query = "SELECT * FROM STUDENT_TABLE WHERE CONCAT(FNAME,LNAME,ADDRESS) LIKE ";
+            string query = "SELECT * FROM STUDENT_TABLE WHERE " +
+                            "address LIKE '%" + searchdata + "%' " +
+                            "OR firstname LIKE '%" + searchdata + "%' " +
+                            "OR lastname LIKE '%" + searchdata + "%'";
+
+
             SqlCommand cmd = new SqlCommand(query, conn);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

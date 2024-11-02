@@ -92,5 +92,27 @@ namespace studentManage
 
             }
         }
+        public void filterTable()
+        {
+            if (textBox_search.Text.ToString() == "")
+            {
+                showTable();
+            }
+            else {
+                dataGridView_student.RowTemplate.Height = 40;
+                dataGridView_student.DataSource = student.searchStudent(textBox_search.Text.ToString());
+            }
+            
+
+
+        }
+
+
+        
+
+        private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            filterTable();
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -55,8 +55,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_student = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button_search = new System.Windows.Forms.Button();
+            this.textBox_search = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_studentImage)).BeginInit();
             this.panel2.SuspendLayout();
@@ -114,7 +114,7 @@
             this.textBox_id.Location = new System.Drawing.Point(443, 83);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(98, 20);
-            this.textBox_id.TabIndex = 27;
+            this.textBox_id.TabIndex = 5;
             // 
             // label7
             // 
@@ -145,7 +145,7 @@
             // button_update
             // 
             this.button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_update.Cursor = System.Windows.Forms.Cursors.No;
+            this.button_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_update.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_update.ForeColor = System.Drawing.SystemColors.Window;
@@ -185,7 +185,7 @@
             this.textBox_lastname.Location = new System.Drawing.Point(405, 23);
             this.textBox_lastname.Name = "textBox_lastname";
             this.textBox_lastname.Size = new System.Drawing.Size(157, 20);
-            this.textBox_lastname.TabIndex = 23;
+            this.textBox_lastname.TabIndex = 2;
             // 
             // textBox_address
             // 
@@ -193,7 +193,7 @@
             this.textBox_address.Multiline = true;
             this.textBox_address.Name = "textBox_address";
             this.textBox_address.Size = new System.Drawing.Size(304, 77);
-            this.textBox_address.TabIndex = 26;
+            this.textBox_address.TabIndex = 4;
             // 
             // label5
             // 
@@ -233,14 +233,14 @@
             this.textBox_firstname.Location = new System.Drawing.Point(127, 23);
             this.textBox_firstname.Name = "textBox_firstname";
             this.textBox_firstname.Size = new System.Drawing.Size(155, 20);
-            this.textBox_firstname.TabIndex = 21;
+            this.textBox_firstname.TabIndex = 1;
             // 
             // dateTimePicker_dob
             // 
             this.dateTimePicker_dob.Location = new System.Drawing.Point(127, 51);
             this.dateTimePicker_dob.Name = "dateTimePicker_dob";
             this.dateTimePicker_dob.Size = new System.Drawing.Size(155, 20);
-            this.dateTimePicker_dob.TabIndex = 25;
+            this.dateTimePicker_dob.TabIndex = 3;
             // 
             // label2
             // 
@@ -297,7 +297,7 @@
             // button_clear
             // 
             this.button_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button_clear.Cursor = System.Windows.Forms.Cursors.No;
+            this.button_clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_clear.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_clear.ForeColor = System.Drawing.SystemColors.Window;
@@ -314,7 +314,7 @@
             this.textBox_phone.Location = new System.Drawing.Point(127, 166);
             this.textBox_phone.Name = "textBox_phone";
             this.textBox_phone.Size = new System.Drawing.Size(162, 20);
-            this.textBox_phone.TabIndex = 38;
+            this.textBox_phone.TabIndex = 6;
             // 
             // label8
             // 
@@ -355,14 +355,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_student.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_student.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView_student.Location = new System.Drawing.Point(4, 66);
@@ -372,34 +372,34 @@
             this.dataGridView_student.TabIndex = 23;
             this.dataGridView_student.Click += new System.EventHandler(this.dataGridView_student_Click);
             // 
-            // textBox1
+            // textBox_search
             // 
-            this.textBox1.Location = new System.Drawing.Point(466, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 38;
+            this.textBox_search.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox_search.Location = new System.Drawing.Point(504, 39);
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(201, 20);
+            this.textBox_search.TabIndex = 38;
+            this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
             // 
-            // button_search
+            // label9
             // 
-            this.button_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_search.Cursor = System.Windows.Forms.Cursors.No;
-            this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_search.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_search.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_search.Location = new System.Drawing.Point(599, 35);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(114, 24);
-            this.button_search.TabIndex = 38;
-            this.button_search.Text = "Search";
-            this.button_search.UseVisualStyleBackColor = false;
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label9.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Purple;
+            this.label9.Location = new System.Drawing.Point(441, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 19);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Search";
             // 
             // manageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 437);
-            this.Controls.Add(this.button_search);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_search);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView_student);
@@ -444,10 +444,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView_student;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button_search;
+        private System.Windows.Forms.TextBox textBox_search;
         private System.Windows.Forms.TextBox textBox_phone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button_clear;
+        private System.Windows.Forms.Label label9;
     }
 }
