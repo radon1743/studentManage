@@ -52,6 +52,85 @@ namespace studentManage
             }
         }
 
+        public bool updateStudents(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, byte[] image)
+        {
+
+
+            SqlConnection conn = new SqlConnection(conString);
+            conn.Open();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+
+                string query = "UPDATE STUDENT_TABLE SET " +
+                                "firstname = @fn" +
+                                ",lastname = @ln" +
+                                ",bdate = @bd" +
+                                ",gender = @gn" +
+                                ",phone = @ph" +
+                                ",address = @ad" +
+                                ",image = @img" +
+                                " WHERE student_id = @id";
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@fn", fname);
+                cmd.Parameters.AddWithValue("@ln", lname);
+                cmd.Parameters.AddWithValue("@bd", bdate);
+                cmd.Parameters.AddWithValue("@gn", gender);
+                cmd.Parameters.AddWithValue("@ph", phone);
+                cmd.Parameters.AddWithValue("@ad", address);
+                cmd.Parameters.AddWithValue("@img", image);
+
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    return true;
+                }
+                else
+                {
+
+                    return false;
+                }
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool deleteStudents(int id)
+        {
+
+            SqlConnection conn = new SqlConnection(conString);
+            conn.Open();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+
+                string query = "DELETE FROM STUDENT_TABLE " +
+                                "WHERE student_id = @id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    return true;
+                }
+                else
+                {
+
+                    return false;
+                }
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+
         public DataTable getStudentList()
         {
             SqlConnection conn = new SqlConnection(conString);
@@ -68,7 +147,22 @@ namespace studentManage
             da.Fill(dt);
             return dt;
         }
+        public DataTable getStudentList_gender(string query)
+        {
+            SqlConnection conn = new SqlConnection(conString);
+            conn.Open();
 
+
+            //string query = "SELECT * FROM STUDENT_TABLE";
+            
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
         public string exeCount(string query)
         {

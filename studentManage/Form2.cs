@@ -98,6 +98,7 @@ namespace studentManage
         private void button4_Click(object sender, EventArgs e)
         {
             //code
+            openChildForm(new printStudent());
             hideSubMenu();
         }
         #endregion studentSubMenu 
