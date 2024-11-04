@@ -12,6 +12,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.IO;
 using System.Data;
 
+
+
+
 namespace studentManage
 {
     public partial class registerForm : Form

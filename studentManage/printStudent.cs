@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
+
 
 namespace studentManage
 {
     public partial class printStudent : Form
     {
         studentClass student = new studentClass();
+        
+        
         public printStudent()
         {
 
@@ -60,6 +64,25 @@ namespace studentManage
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             sortStudents();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Baroda student List";
+            printer.SubTitle = string.Format("Date & Time: {0} ",DateTime.Now);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Made by rachit";
+            printer.FooterSpacing = 15;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+           // printer.PrintPreviewDataGridView(dataGridView_student);
+            printer.PrintPreviewNoDisplay(dataGridView_student);
+            
         }
     }
 }

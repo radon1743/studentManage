@@ -44,7 +44,6 @@
             this.button_Course = new System.Windows.Forms.Button();
             this.panel_studentMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button_std = new System.Windows.Forms.Button();
@@ -61,15 +60,15 @@
             this.label_FStd = new System.Windows.Forms.Label();
             this.label_MStd = new System.Windows.Forms.Label();
             this.label_TotStd = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1_sidebar.SuspendLayout();
             this.panel_scoreMenu.SuspendLayout();
             this.panel_courseMenu.SuspendLayout();
@@ -77,10 +76,10 @@
             this.panel1.SuspendLayout();
             this.panel_mainForm.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1_sidebar
@@ -105,6 +104,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button11
             // 
@@ -209,7 +209,6 @@
             // 
             this.panel_studentMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel_studentMenu.Controls.Add(this.button4);
-            this.panel_studentMenu.Controls.Add(this.button3);
             this.panel_studentMenu.Controls.Add(this.button2);
             this.panel_studentMenu.Controls.Add(this.button1);
             resources.ApplyResources(this.panel_studentMenu, "panel_studentMenu");
@@ -223,15 +222,6 @@
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -292,9 +282,9 @@
             resources.ApplyResources(this.panel_mainForm, "panel_mainForm");
             this.panel_mainForm.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel_mainForm.Controls.Add(this.panel4);
-            this.panel_mainForm.Controls.Add(this.panel3);
             this.panel_mainForm.Controls.Add(this.panel2);
             this.panel_mainForm.Controls.Add(this.pictureBox2);
+            this.panel_mainForm.Controls.Add(this.panel3);
             this.panel_mainForm.Name = "panel_mainForm";
             this.panel_mainForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_mainForm_Paint);
             // 
@@ -353,6 +343,24 @@
             this.label_TotStd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label_TotStd.Name = "label_TotStd";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label14);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label14.Name = "label14";
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -394,24 +402,6 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Name = "label2";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label14);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label14.Name = "label14";
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
             // Form2
             // 
             resources.ApplyResources(this, "$this");
@@ -429,14 +419,13 @@
             this.panel_mainForm.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -460,7 +449,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button_Score;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel_mainForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

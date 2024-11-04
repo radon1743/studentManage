@@ -112,6 +112,7 @@ namespace studentManage
         private void button9_Click(object sender, EventArgs e)
         {
             //code
+            openChildForm(new courseForm());
             hideSubMenu();
         }
 
@@ -187,6 +188,11 @@ namespace studentManage
         private void panel_mainForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
