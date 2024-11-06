@@ -34,7 +34,6 @@ namespace studentManage
 
         public void showTable() {
             dataGridView_student.RowTemplate.Height = 40;
-            
             dataGridView_student.DataSource = student.getStudentList();
             
             

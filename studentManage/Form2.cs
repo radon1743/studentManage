@@ -119,12 +119,14 @@ namespace studentManage
         private void button8_Click(object sender, EventArgs e)
         {
             //code
+            openChildForm(new manageCourseForm());
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             //code
+            openChildForm(new printCourseForm());
             hideSubMenu();
         }
         #endregion courseSubMenu
@@ -138,6 +140,7 @@ namespace studentManage
         private void button13_Click(object sender, EventArgs e)
         {
             //code
+            openChildForm(new scoreForm());
             hideSubMenu();
         }
 

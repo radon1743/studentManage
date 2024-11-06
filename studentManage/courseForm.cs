@@ -23,7 +23,16 @@ namespace studentManage
         private void courseForm_Load(object sender, EventArgs e)
         {
             radioButton1.Checked = true;
+            showTable();
         }
+        public void showTable()
+        {
+            dataGridView_student.RowTemplate.Height = 40;
+            dataGridView_student.DataSource = course.getCourseList();   
+
+
+        }
+
         bool verify()
         {
             if ((textBox_coursename.Text == "") || (textBox_hours.Text == "") || (textBox_desciption.Text == ""))
@@ -62,7 +71,7 @@ namespace studentManage
                 if (course.insertCourse(cname,hours,desc,opt))
                 {
                     MessageBox.Show("Student details added Successfully!");
-                    //showCourseTable();
+                    showTable();
                     clear_data();
 
                 }
