@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox_course = new System.Windows.Forms.ComboBox();
             this.textBox_score = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_add = new System.Windows.Forms.Button();
-            this.button_clear = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
             this.textBox_desciption = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_studentlist = new System.Windows.Forms.Button();
@@ -44,6 +43,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_maintable = new System.Windows.Forms.DataGridView();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_maintable)).BeginInit();
@@ -86,33 +87,20 @@
             this.panel3.Size = new System.Drawing.Size(711, 8);
             this.panel3.TabIndex = 37;
             // 
-            // button_add
+            // button_update
             // 
-            this.button_add.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_add.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_add.Location = new System.Drawing.Point(581, 170);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(124, 24);
-            this.button_add.TabIndex = 34;
-            this.button_add.Text = "Add";
-            this.button_add.UseVisualStyleBackColor = false;
-            // 
-            // button_clear
-            // 
-            this.button_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button_clear.Cursor = System.Windows.Forms.Cursors.No;
-            this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_clear.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_clear.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_clear.Location = new System.Drawing.Point(451, 170);
-            this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(124, 24);
-            this.button_clear.TabIndex = 33;
-            this.button_clear.Text = "Clear";
-            this.button_clear.UseVisualStyleBackColor = false;
+            this.button_update.BackColor = System.Drawing.Color.YellowGreen;
+            this.button_update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_update.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_update.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_update.Location = new System.Drawing.Point(612, 159);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(97, 32);
+            this.button_update.TabIndex = 34;
+            this.button_update.Text = "Update";
+            this.button_update.UseVisualStyleBackColor = false;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // textBox_desciption
             // 
@@ -179,12 +167,13 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button_delete);
             this.panel2.Controls.Add(this.comboBox_course);
             this.panel2.Controls.Add(this.textBox_score);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button_add);
-            this.panel2.Controls.Add(this.button_clear);
+            this.panel2.Controls.Add(this.button_update);
             this.panel2.Controls.Add(this.textBox_desciption);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -214,14 +203,14 @@
             this.dataGridView_maintable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_maintable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_maintable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_maintable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_maintable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_maintable.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView_maintable.Location = new System.Drawing.Point(9, 38);
             this.dataGridView_maintable.Name = "dataGridView_maintable";
@@ -230,6 +219,36 @@
             this.dataGridView_maintable.Size = new System.Drawing.Size(701, 193);
             this.dataGridView_maintable.TabIndex = 28;
             this.dataGridView_maintable.Click += new System.EventHandler(this.dataGridView_maintable_Click);
+            // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.Red;
+            this.button_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_delete.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_delete.Location = new System.Drawing.Point(511, 159);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(97, 32);
+            this.button_delete.TabIndex = 41;
+            this.button_delete.Text = "Delete";
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.Cursor = System.Windows.Forms.Cursors.No;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Window;
+            this.button2.Location = new System.Drawing.Point(511, 123);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 30);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // manageScore
             // 
@@ -256,8 +275,7 @@
         private System.Windows.Forms.TextBox textBox_score;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button_add;
-        private System.Windows.Forms.Button button_clear;
+        private System.Windows.Forms.Button button_update;
         private System.Windows.Forms.TextBox textBox_desciption;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
@@ -267,5 +285,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView_maintable;
         private System.Windows.Forms.Button button_studentlist;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_delete;
     }
 }

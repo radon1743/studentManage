@@ -27,6 +27,36 @@ namespace studentManage
             da.Fill(dt);
             return dt;
         }
+        public bool deleteStudentscore(int id, string cname)
+        {
+
+            SqlConnection conn = new SqlConnection(conString);
+            conn.Open();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+
+                string query = "DELETE FROM SCORE_TABLE " +
+                                "WHERE student_id = @id AND coursename=@cn";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@cn", cname);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    return true;
+                }
+                else
+                {
+
+                    return false;
+                }
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
 
         public DataTable getScoreList(string qry,int id)
         {
@@ -92,6 +122,43 @@ namespace studentManage
             }
 
         }
+        public bool updateScore(int id, string cname, float score, string desc)
+        {
 
+
+            SqlConnection conn = new SqlConnection(conString);
+            conn.Open();
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+
+                string query = "UPDATE COURSE_TABLE SET " +
+                                "score = @sc" +
+                                ",de = @ln" +
+                                ",bdate = @bd" +
+                                " student_id=@id AND coursename=@cn";
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@cn", cname);
+                cmd.Parameters.AddWithValue("@sc", score);
+                cmd.Parameters.AddWithValue("@dc", desc);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    return true;
+                }
+                else
+                {
+
+                    return false;
+                }
+            }
+
+            else
+            {
+                return false;
+            }
+        }
     }
 }
