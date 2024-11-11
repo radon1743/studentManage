@@ -147,6 +147,7 @@ namespace studentManage
         private void button12_Click(object sender, EventArgs e)
         {
             //code
+            openChildForm(new manageScore());
             hideSubMenu();
         }
 

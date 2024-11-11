@@ -28,59 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView_student = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox_course = new System.Windows.Forms.ComboBox();
+            this.textBox_score = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button_add = new System.Windows.Forms.Button();
             this.button_clear = new System.Windows.Forms.Button();
             this.textBox_desciption = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_coursename = new System.Windows.Forms.TextBox();
+            this.textBox_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox_course = new System.Windows.Forms.ComboBox();
-            this.dataGridView_scorelist = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridView_student = new System.Windows.Forms.DataGridView();
+            this.dataGridView_scorelist = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_student)).BeginInit();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_student)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_scorelist)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView_student
-            // 
-            this.dataGridView_student.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView_student.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView_student.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView_student.Location = new System.Drawing.Point(5, 35);
-            this.dataGridView_student.Name = "dataGridView_student";
-            this.dataGridView_student.RowHeadersWidth = 30;
-            this.dataGridView_student.Size = new System.Drawing.Size(342, 198);
-            this.dataGridView_student.TabIndex = 26;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(112, 8);
+            this.label6.Location = new System.Drawing.Point(3, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 25);
             this.label6.TabIndex = 0;
@@ -92,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.comboBox_course);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBox_score);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button_add);
@@ -100,20 +83,48 @@
             this.panel2.Controls.Add(this.textBox_desciption);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox_coursename);
+            this.panel2.Controls.Add(this.textBox_id);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1, 234);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(715, 203);
+            this.panel2.Size = new System.Drawing.Size(719, 203);
             this.panel2.TabIndex = 28;
+            // 
+            // comboBox_course
+            // 
+            this.comboBox_course.FormattingEnabled = true;
+            this.comboBox_course.Location = new System.Drawing.Point(144, 43);
+            this.comboBox_course.Name = "comboBox_course";
+            this.comboBox_course.Size = new System.Drawing.Size(284, 21);
+            this.comboBox_course.TabIndex = 40;
+            // 
+            // textBox_score
+            // 
+            this.textBox_score.Location = new System.Drawing.Point(144, 70);
+            this.textBox_score.Name = "textBox_score";
+            this.textBox_score.Size = new System.Drawing.Size(91, 20);
+            this.textBox_score.TabIndex = 38;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(70, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 19);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Score :";
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel3.Location = new System.Drawing.Point(3, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(708, 8);
+            this.panel3.Size = new System.Drawing.Size(711, 8);
             this.panel3.TabIndex = 37;
             // 
             // button_add
@@ -129,6 +140,7 @@
             this.button_add.TabIndex = 34;
             this.button_add.Text = "Add";
             this.button_add.UseVisualStyleBackColor = false;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // button_clear
             // 
@@ -143,6 +155,7 @@
             this.button_clear.TabIndex = 33;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = false;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // textBox_desciption
             // 
@@ -174,12 +187,12 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Select Course :";
             // 
-            // textBox_coursename
+            // textBox_id
             // 
-            this.textBox_coursename.Location = new System.Drawing.Point(144, 15);
-            this.textBox_coursename.Name = "textBox_coursename";
-            this.textBox_coursename.Size = new System.Drawing.Size(155, 20);
-            this.textBox_coursename.TabIndex = 21;
+            this.textBox_id.Location = new System.Drawing.Point(144, 15);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(155, 20);
+            this.textBox_id.TabIndex = 21;
             // 
             // label1
             // 
@@ -203,72 +216,74 @@
             this.panel1.Size = new System.Drawing.Size(715, 33);
             this.panel1.TabIndex = 27;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(144, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(91, 20);
-            this.textBox1.TabIndex = 38;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(70, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 19);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Score :";
-            // 
-            // comboBox_course
-            // 
-            this.comboBox_course.FormattingEnabled = true;
-            this.comboBox_course.Location = new System.Drawing.Point(144, 43);
-            this.comboBox_course.Name = "comboBox_course";
-            this.comboBox_course.Size = new System.Drawing.Size(284, 21);
-            this.comboBox_course.TabIndex = 40;
-            // 
-            // dataGridView_scorelist
-            // 
-            this.dataGridView_scorelist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_scorelist.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView_scorelist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_scorelist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView_scorelist.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView_scorelist.Location = new System.Drawing.Point(369, 35);
-            this.dataGridView_scorelist.Name = "dataGridView_scorelist";
-            this.dataGridView_scorelist.RowHeadersWidth = 30;
-            this.dataGridView_scorelist.Size = new System.Drawing.Size(342, 198);
-            this.dataGridView_scorelist.TabIndex = 29;
-            // 
-            // panel4
-            // 
-            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(353, 33);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 202);
-            this.panel4.TabIndex = 30;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(477, 8);
+            this.label3.Location = new System.Drawing.Point(369, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Score List";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.AutoSize = true;
+            this.panel6.Controls.Add(this.dataGridView_student);
+            this.panel6.Controls.Add(this.dataGridView_scorelist);
+            this.panel6.Location = new System.Drawing.Point(4, 39);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(708, 196);
+            this.panel6.TabIndex = 41;
+            // 
+            // dataGridView_student
+            // 
+            this.dataGridView_student.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView_student.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView_student.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_student.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_student.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView_student.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_student.Name = "dataGridView_student";
+            this.dataGridView_student.RowHeadersWidth = 30;
+            this.dataGridView_student.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView_student.Size = new System.Drawing.Size(343, 193);
+            this.dataGridView_student.TabIndex = 27;
+            this.dataGridView_student.Click += new System.EventHandler(this.dataGridView_student_Click);
+            // 
+            // dataGridView_scorelist
+            // 
+            this.dataGridView_scorelist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_scorelist.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView_scorelist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_scorelist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_scorelist.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView_scorelist.Location = new System.Drawing.Point(366, 0);
+            this.dataGridView_scorelist.Name = "dataGridView_scorelist";
+            this.dataGridView_scorelist.RowHeadersWidth = 30;
+            this.dataGridView_scorelist.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView_scorelist.Size = new System.Drawing.Size(342, 193);
+            this.dataGridView_scorelist.TabIndex = 30;
             // 
             // panel5
             // 
@@ -277,24 +292,36 @@
             this.panel5.Size = new System.Drawing.Size(200, 100);
             this.panel5.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(353, 33);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(13, 404);
+            this.panel4.TabIndex = 30;
+            // 
             // scoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 437);
-            this.Controls.Add(this.dataGridView_scorelist);
-            this.Controls.Add(this.dataGridView_student);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel6);
             this.Name = "scoreForm";
             this.Text = "scoreForm";
             this.Load += new System.EventHandler(this.scoreForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_student)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_student)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_scorelist)).EndInit();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -303,8 +330,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView_student;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -313,15 +338,17 @@
         private System.Windows.Forms.TextBox textBox_desciption;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_coursename;
+        private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_score;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox_course;
-        private System.Windows.Forms.DataGridView dataGridView_scorelist;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridView_student;
+        private System.Windows.Forms.DataGridView dataGridView_scorelist;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
     }
 }

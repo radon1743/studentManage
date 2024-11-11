@@ -78,6 +78,12 @@
     <Compile Include="manageForm.Designer.cs">
       <DependentUpon>manageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="manageScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageScore.Designer.cs">
+      <DependentUpon>manageScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="printCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manageForm.resx">
       <DependentUpon>manageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageScore.resx">
+      <DependentUpon>manageScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="printCourseForm.resx">
       <DependentUpon>printCourseForm.cs</DependentUpon>

@@ -103,5 +103,10 @@ namespace studentManage
         {
             filterTable();
         }
+
+        private void dataGridView_student_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
