@@ -118,6 +118,12 @@
     <Compile Include="scoreForm.Designer.cs">
       <DependentUpon>scoreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="splashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashScreen.Designer.cs">
+      <DependentUpon>splashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="studentClass.cs" />
     <EmbeddedResource Include="courseForm.resx">
       <DependentUpon>courseForm.cs</DependentUpon>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="scoreForm.resx">
       <DependentUpon>scoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashScreen.resx">
+      <DependentUpon>splashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

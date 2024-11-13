@@ -16,7 +16,7 @@ namespace studentManage
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 loginForm = new Form1();
+            splashScreen loginForm = new splashScreen();
             Application.Run(loginForm);
             
         }

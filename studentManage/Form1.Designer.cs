@@ -89,9 +89,9 @@
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 29);
+            this.label2.Size = new System.Drawing.Size(112, 29);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Email:";
+            this.label2.Text = "Admin No:";
             // 
             // label3
             // 
@@ -115,6 +115,7 @@
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(129, 236);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(213, 20);
             this.passwordTextBox.TabIndex = 2;
             // 

@@ -38,20 +38,15 @@ namespace studentManage
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (emailTextBox.Text == "" && 
-                passwordTextBox.Text == "")
-            
-            {
+            if (ad.checkIdPass(Convert.ToInt32(emailTextBox.Text), passwordTextBox.Text.ToString())) {
                 this.Hide();
                 var mainForm = new Form2();
                 mainForm.FormClosed += (s, args) => this.Close();
                 mainForm.Show();
-
-                //MessageBox.Show("Right email or Password");
-            }   
+            }
             else 
             {
-                MessageBox.Show("Wrong email or Password");
+                MessageBox.Show("Wrong id or Password","Wrong credentials");
             }
         }
 
