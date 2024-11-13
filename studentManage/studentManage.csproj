@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.cs" />
     <Compile Include="courseClass.cs" />
     <Compile Include="courseForm.cs">
       <SubType>Form</SubType>
@@ -90,6 +91,12 @@
     <Compile Include="printCourseForm.Designer.cs">
       <DependentUpon>printCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="printScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printScore.Designer.cs">
+      <DependentUpon>printScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="printStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="printCourseForm.resx">
       <DependentUpon>printCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printScore.resx">
+      <DependentUpon>printScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="printStudent.resx">
       <DependentUpon>printStudent.cs</DependentUpon>

@@ -76,7 +76,7 @@ namespace studentManage
                 textBox_id.Text = dataGridView_maintable.CurrentRow.Cells[0].Value.ToString();
                 comboBox_course.Text = dataGridView_maintable.CurrentRow.Cells[1].Value.ToString();
                 textBox_score.Text = dataGridView_maintable.CurrentRow.Cells[2].Value.ToString();
-                textBox_desciption.Text = dataGridView_maintable.CurrentRow.Cells[3].Value.ToString();
+               
             }
             else
             {

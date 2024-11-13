@@ -131,11 +131,10 @@ namespace studentManage
             if (conn.State == System.Data.ConnectionState.Open)
             {
 
-                string query = "UPDATE COURSE_TABLE SET " +
+                string query = "UPDATE SCORE_TABLE SET " +
                                 "score = @sc" +
-                                ",de = @ln" +
-                                ",bdate = @bd" +
-                                " student_id=@id AND coursename=@cn";
+                                ",decrIption = @dc" +
+                                " WHERE student_id=@id AND coursename=@cn";
 
 
                 SqlCommand cmd = new SqlCommand(query, conn);

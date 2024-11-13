@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace studentManage
 {
+    
     public partial class Form1 : Form
     {
+        admin ad = new admin();
+
+
         public Form1()
         {
             InitializeComponent();
